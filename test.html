@@ -7,6 +7,7 @@
 <body>
 
 </body>
+<script src="node_modules/lodash/lodash.js"></script>
 <script>
   function i2s(i) {
     var s = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
@@ -24,6 +25,37 @@
 //  console.log(arr.sort(function (a,b) {
 //    return a - b;
 //  }));
+//  var collection = [
+//    "a", "a", "a",
+//    "e", "e", "e", "e", "e", "e", "e",
+//    "h", "h", "h", "h", "h", "h", "h", "h", "h", "h", "h",
+//    "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t", "t",
+//    "f", "f", "f", "f", "f", "f", "f", "f", "f",
+//    "c", "c", "c", "c", "c", "c", "c", "c",
+//    "g", "g", "g", "g", "g", "g", "g",
+//    "b", "b", "b", "b", "b", "b",
+//    "d", "d", "d", "d", "d"
+//  ];
+//  var result = [];
+//  var array = [];
+//  var num = 0;
+//  for (var i = 0; i < collection.length; i++){
+//    var count = 0;
+//    for (var j = 0 ; j < collection.length; j++){
+//      if(collection[i] == collection[j]){
+//        count++;
+//      }
+//    }
+//    array.push([collection[i],count]);
+//    num+=count;
+//    i = num;
+//    console.log(i);
+//  }
+//  for (var i = 0 ; i < array.length; i ++){
+//    result.push({key:array[i][0],count:array[i][1]})
+//  }
+//  console.log(result);
+//  console.log(array);
   var collection = [
     "a", "a", "a",
     "e", "e", "e", "e", "e", "e", "e",
@@ -33,36 +65,7 @@
     "c", "c", "c", "c", "c", "c", "c", "c",
     "g", "g", "g", "g", "g", "g", "g",
     "b", "b", "b", "b", "b", "b",
-    "d", "d", "d", "d", "d"
+    "d-5"
   ];
-  var result = [];
-  var array = [];
-  var num = 0;
-  for (var i = 0; i < collection.length; i++){
-    var count = 0;
-    for (var j = 0 ; j < collection.length; j++){
-      if(collection[i] == collection[j]){
-        count++;
-      }
-    }
-    array.push([collection[i],count]);
-    num+=count;
-    i = num;
-    console.log(i);
-  }
-  for (var i = 0 ; i < array.length; i ++){
-    result.push({key:array[i][0],count:array[i][1]})
-  }
-  console.log(result);
-  console.log(array);
-//  var collection_a = [3, 2, 4, 5, 6];
-//  collection_a.sort();
-//  collection_a.reverse();
-//  console.log(collection_a);
-//  alert(i2s(1));
-//  alert(i2s(26));
-//  alert(i2s(53));
-//  alert(i2s(30));
-//  alert(52%26);
 </script>
 </html>

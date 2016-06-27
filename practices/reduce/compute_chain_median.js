@@ -1,16 +1,17 @@
 'use strict';
-
+var _ = require("lodash");
 function compute_chain_median(collection) {
   var arr = collection.split("->");
-  var array = arr.sort(function (a,b) {
-    return a - b;
+  var array = _.map(arr,function (item) {
+    return parseInt(item);
   });
-  if(array.length % 2 == 0){
-    var n = array.length/2-1;
+  var myarray = _.orderBy(array);
+  if(myarray.length % 2 == 0){
+    var n = myarray.length/2-1;
   }else {
-    var n = array.length/2;
+    var n = myarray.length/2;
   }
-  var result = (parseInt(array[n])+parseInt(array[n+1]))/2;
+  var result = (parseInt(myarray[n])+parseInt(myarray[n+1]))/2;
   return result;
 }
 

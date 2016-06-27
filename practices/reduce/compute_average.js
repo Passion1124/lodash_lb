@@ -1,12 +1,7 @@
 'use strict';
-
+var _ = require("lodash");
 function compute_average(collection) {
-  var result;
-  var value = collection[0];
-  for (var i = 1; i < collection.length; i++){
-    value += collection[i];
-  }
-  result = value / collection.length;
+  var result = _.mean(collection);
   return result;
 }
 

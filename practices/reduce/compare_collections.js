@@ -1,15 +1,7 @@
 'use strict';
-
+var _ = require("lodash");
 function compare_collections(collection_a, collection_b) {
-  var result = false;
-  for (var i = 0 ; i < collection_a.length; i++){
-    if(collection_a[i] == collection_b[i]){
-      result = true;
-    }else {
-      result = false;
-      break;
-    }
-  }
+  var result = _.isEqual(collection_a,collection_b);
   return result;
 }
 
